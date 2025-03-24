@@ -12,5 +12,5 @@ from django.template import loader
 def index(request):
     print('This is the index')
     template = loader.get_template("assessments/index.html")
-    context = {'text' : 'This is some text!'}
+    context = {'text' : 'This is the assessment page!'}
     return HttpResponse(template.render(context, request))
