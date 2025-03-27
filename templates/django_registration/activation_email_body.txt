@@ -1,0 +1,3 @@
+Please click the following link to activate your email
+
+{{scheme}}{{site }}{%url 'activation_form' activation_key %}

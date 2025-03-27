@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_registration',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,14 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+##REGISTRATION SETTINGS
+REGISTRATION_OPEN = True #New users will be able to register
+ACCOUNT_ACTIVATION_DAYS = 7
+
+##LOGIN SETTINGS
+LOGIN_REDIRECT_URL = "assessments/"
+
+##EMAIL_BACKEND (TESTING)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
