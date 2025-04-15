@@ -10,8 +10,8 @@ h1 {
     border-radius: 15px;
     width: 500px;
     height: 350px;
-    background-color: #f3f3f3;
-    border: 2px solid green;
+    background-color: #7A1CAC;
+    border: 2px solid #AD49E1;
 }
 
 #box-contents {
@@ -23,4 +23,9 @@ h1 {
 #box-title {
     text-align:left;
     margin: 20px;
+}
+
+body {
+    background-color: #2E073F;
+    color: #EBD3F8;
 }
