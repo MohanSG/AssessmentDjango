@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_registration',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -131,7 +131,10 @@ REGISTRATION_OPEN = True #New users will be able to register
 ACCOUNT_ACTIVATION_DAYS = 7
 
 ##LOGIN SETTINGS
-LOGIN_REDIRECT_URL = "assessments/"
+LOGIN_REDIRECT_URL = "/assessments/"
 
 ##EMAIL_BACKEND (TESTING)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ 
+##CRISPY
+CRISPY_TEMPLATE_PACK="bootstrap4"

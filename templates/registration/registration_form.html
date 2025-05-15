@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+{% block title %} Register {%endblock %} 
+{% block content %}
+<div
+  class="container-sm w-50 border rounded p-3 m-3 position-absolute top-50 start-50 translate-middle"
+>
+  <h3>Register</h3>
+  <form method="post">
+    {%csrf_token%} {{form.as_p}}
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+    {%if messages %}
+      {% for message in messages %}
+        <p class="alert alert-{{message.tags}} mt-3">
+          {{message}}
+        </p>
+      {% endfor %}
+  {% endif %}
+</div>
+{% endblock %}

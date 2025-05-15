@@ -1,3 +1,0 @@
-Please click the following link to activate your email
-
-http://{{site }}{%url 'django_registration_activate' activation_key=activation_key %}
