@@ -1,19 +1,20 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{%static 'core/core.css'%}">
-    <title>Welcome</title>
-    
-</head>
-<body>
-    <div id="box">
-        <h3 id="box-title">Welcome, {{ user.username }}</h3>
-        <div id="box-contents">
-            <p>{{text}}</p>
-        <div>
+{% extends 'base.html' %} {% load static %}
+{% block title %} Dashboard {%endblock %} 
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            Column 1
+        </div>
+        <div class="col">
+            Column 2
+        </div>
+        <div class="col">
+            Column 3
+        </div>
     </div>
-</body>
-</html>
+</div>
+
+{% endblock %}
