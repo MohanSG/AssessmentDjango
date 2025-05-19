@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
 from django.contrib import messages
 from django.contrib.auth.views import LoginView
-
+from assessments.models import Teacher, SchoolClass
 # Create your views here.
 class MyLoginView(LoginView):
     template_name= 'registration/login.html'
@@ -48,4 +48,6 @@ class MyRegisterView(CreateView):
     
     def form_valid(self, form):
         messages.success(self.request, "Registration successful! Please log in to continue")
-        return super().form_valid(form)
+        response = super().form_valid(form)
+        Teacher.objects.create(user=self.object, name="name", assigned_class = SchoolClass.objects.get(id=1))
+        return response
