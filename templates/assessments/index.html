@@ -1,20 +1,116 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base-logged-in.html' %} {% load static %}
 {% block title %} Dashboard {%endblock %} 
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            Column 1
+<div class="d-flex">
+    <div class="d-flex flex-column flex-shrink p-3 text-white bg-dark vh-100" style="width: 280px;">
+        <a class="d-flex align-items-center pb-1 link-dark text-decoration-none" href="#">
+            <span class="fs-5 fw-semibold text-white">Dashboard</span>
+        </a>
+        <hr>
+        <ul class="flex-column mb-auto">
+            <li class="list-unstyled ps-0"><!--Home-->
+            <button class="btn btn-toggle alight-items-center rounded collapsed text-white fw-bold" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                Home
+            </button>
+            <div id="home-collapse" class="collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ms-4 small">
+                    <li>
+                        <a class="link-dark rounded text-white text-decoration-none" href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a class="link-dark rounded text-white text-decoration-none" href="#">Reports</a>
+                    </li>
+                </ul>
+            </div>
+            </li>
+            <li class="list-unstyled ps-0"><!--Class-->
+            <button class="btn btn-toggle alight-items-center rounded collapsed text-white fw-bold" data-bs-toggle="collapse" data-bs-target="#class-collapse" aria-expanded="true">
+                Class
+            </button>
+            <div id="class-collapse" class="collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ms-4 small">
+                    <li>
+                        <a class="link-dark rounded text-white text-decoration-none" href="#">Edit class</a>
+                    </li>
+                    <li>
+                        <a class="link-dark rounded text-white text-decoration-none" href="#">Add/Delete Class</a>
+                    </li>
+                    <li>
+                        <a class="link-dark rounded text-white text-decoration-none" href="#">View Student</a>
+                    </li>
+                </ul>
+            </div>
+            </li>
+            <li class="list-unstyled ps-0"><!--Assessment-->
+            <button class="btn btn-toggle alight-items-center rounded collapsed text-white fw-bold" data-bs-toggle="collapse" data-bs-target="#assess-collapse" aria-expanded="true">
+                Assessment
+            </button>
+            <div id="assess-collapse" class="collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ms-4 small">
+                    <li>
+                        <a class="link-dark rounded text-white text-decoration-none" href="#">New Assessment</a>
+                    </li>
+                    <li>
+                        <a class="link-dark rounded text-white text-decoration-none" href="#">Edit Assessment</a>
+                    </li>
+                </ul>
+            </div>
+            </li>
+        </ul>
+        <hr>
+        <div class="dropdown"> <!--Account-->
+            <a id="dropdownAccount" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="rounded-circle me-2" src="https://github.com/mdo.png" alt="" width="32" height="32">
+                <strong>{{ user.username }}</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small" aria-expanded="false">
+                <li>
+                    <a class="dropdown-item" href="#">Account Settings</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">Log out</a>
+                </li>
+            </ul>
         </div>
-        <div class="col">
-            Column 2
+    </div>
+
+    <div class="container mt-5">
+    <div class="row border rounded g-0 mb-1">
+        <h3>Recent Activity</h3>
+        <div>Recent Activity 111</div>
+        <div>Recent Activity 111</div>
+        <div>Recent Activity 111</div>
+    </div>
+    <div class="row g-0">
+        <div class="col-md-4">
+            <div class="border rounded mb-1">
+                <div>Some content</div>
+                <div>Some content</div>
+                <div>Some content</div>
+                <div>Some content</div>
+            </div>
+            <div class="border rounded">
+                <div>Some content 2</div>
+                <div>Some content 2</div>
+                <div>Some content 2</div>
+                <div>Some content 2</div>
+            </div>
         </div>
-        <div class="col">
-            Column 3
+        <div class="col ms-1 border">
+            <div>This is the graph</div>
+            <div>This is the graph</div>
+            <div>This is the graph</div>
+            <div>This is the graph</div>
+        </div>
+        <div class="col ms-1 border">
+            <div>This is the graph 2</div>
+            <div>This is the graph 2</div>
+            <div>This is the graph 2</div>
+            <div>This is the graph 2</div>
         </div>
     </div>
 </div>
-
+</div>
 {% endblock %}
