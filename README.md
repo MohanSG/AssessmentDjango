@@ -1,0 +1,3 @@
+Work in progress...
+
+A website developed using Django, allows Teachers to log assessment data, and Parents to view their childs progress throughout the school year. Django authentication and admin tools built in for easy manangement.
